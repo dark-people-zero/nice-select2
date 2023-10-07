@@ -12,6 +12,7 @@
     "shx": "^0.3.4"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.4.5",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
@@ -20,6 +21,7 @@
   },
   "scripts": {
     "watch": "webpack --watch --progress",
+    "watch-dev": "npm run clean && cross-env NODE_ENV=\"development\" webpack --watch --progress",
     "dev": "npm run clean && cross-env NODE_ENV=\"development\" webpack",
     "clean": "shx rm -rf build/static",
     "build": "npm run clean && cross-env NODE_ENV=\"production\" webpack"

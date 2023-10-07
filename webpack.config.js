@@ -19,9 +19,11 @@ module.exports = {
     optimization: {
 		usedExports: true,
     },
-	plugins: [new MiniCssExtractPlugin({
-		filename: "css/[name].css",
-    })],
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: "css/[name].css",
+    	}),
+	],
 	module: {
 		rules: [
 		  {
