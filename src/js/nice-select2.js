@@ -516,6 +516,7 @@ NiceSelect.prototype._onItemClicked = function (option, e) {
 			addClass(optionEl, "selected");
 			option.attributes.selected = true;
 			this.selectedOptions = [option];
+			if(this.config.onChange) this.config.onChange(this.selectedOptions);
 		}
 
 		this._renderSelectedItems();
