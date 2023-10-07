@@ -60,6 +60,7 @@ new NiceSelect(document.getElementById("a-select"), {searchable: true});
 Full documentation and examples at [https://bluzky.github.io/nice-select2/](https://bluzky.github.io/nice-select2/).
 
 Server Side (New):
+
 NiceSelect2 will issue a request to the specified URL when the page loads, and again every time the user types in the search box. By default, it will send the following as query string parameters
 
 - `term` : The current search term in the search box
