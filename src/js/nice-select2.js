@@ -486,7 +486,7 @@ NiceSelect.prototype._onClicked = function (e) {
 		});
 	} else {
 		this.dropdown.focus();
-		this._resetDataServerSide();
+		if(this.config.serverSide) this._resetDataServerSide();
 	}
 };
 
@@ -557,7 +557,7 @@ NiceSelect.prototype.resetSelectValue = function () {
 
 NiceSelect.prototype._onClickedOutside = function (e) {
 	if (!this.dropdown.contains(e.target)) {
-		if(hasClass(this.dropdown, "open")) this._resetDataServerSide();
+		if(hasClass(this.dropdown, "open") && this.config.serverSide) this._resetDataServerSide();
 		removeClass(this.dropdown, "open");
 		triggerModalClose(this.el);
 	}
